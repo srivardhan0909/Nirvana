@@ -1,0 +1,21 @@
+.subm{
+    width: 100px;
+    justify-content: center;
+    padding-left: 10px;
+}
+.row{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+    width: 500px;
+}
+.form{
+    justify-content: center;
+}
+
+.form-control:focus {
+    border: none; /* Remove default border */
+    border-bottom: 1px solid #277410; /* Add bottom border */
+    border-radius: 0; /* Remove border-radius */
+    text-align: left; /* Align text to left */
+}

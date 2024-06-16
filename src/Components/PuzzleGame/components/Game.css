@@ -1,0 +1,54 @@
+/* Game.css */
+
+.game-container1 {
+    height: 100vh;
+    display: flex;
+    color: rgb(255, 255, 255);
+    background-color: #222;
+}
+
+.game-content {
+    margin: auto;
+}
+
+.win-message {
+    border-left: 4px solid #0f0;
+    background-color: #afa;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.game-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #4b0082 10%, #87ceeb 30%, #228b22 90%);
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin-top: 12px;
+}
+
+.timer {
+    font-weight: bold;
+}
+
+.win-actions {
+    margin-top: 24px;
+    padding: 0 16px;
+}
+
+.new-game-btn,
+.next-level-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    margin-bottom: 12px;
+}

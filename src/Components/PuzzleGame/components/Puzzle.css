@@ -1,0 +1,6 @@
+/* Puzzle.css */
+
+.puzzle-container {
+    display: grid;
+    border-radius: 8px;
+}

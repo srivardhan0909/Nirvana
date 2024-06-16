@@ -1,0 +1,14 @@
+.round-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: url('assests/chat_bot_image.jpg'); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 99998;
+  }
+  

@@ -1,0 +1,18 @@
+.motivational-particle {
+    font-size: 25px;
+    color: #ff730074; /* Default color */
+    font-weight: bold;
+      
+    /* Increase font size at specific breakpoints */
+   
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}

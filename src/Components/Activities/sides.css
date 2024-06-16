@@ -1,0 +1,57 @@
+/* sides.css */
+
+/* Add transition for the split effect */
+.nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  transition: transform 0.3s ease; /* Add transition for transform property */
+  /* Add custom text style */
+  font-family: 'Slant', sans-serif;
+  letter-spacing: 1px;
+  border-radius: 20px; /* Make the corners rounded */
+  transition: background-color 0.3s, color 0.3s;
+  color: #000000; /* Default text color */
+  background-color: transparent; /* Default background color */
+}
+
+.nav-link.active {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+.nav-link:hover {
+  color: #000000;
+  box-shadow: 0px 0px 30px rgba(0, 123, 255, 0.7); /* Blue light effect */
+}
+
+/* Define the split transition effect */
+.split-transition {
+  transform: scaleX(1.5); /* Increase the split size */
+}
+/* Add border style to separate navbar from videos */
+.border-divider {
+  border-left: 3px solid #0b0000; /* Adjust border style as needed */
+  height: 100%; /* Ensures border covers full height */
+}
+.nav-pills {
+  position: fixed;
+  top: 75px; /* Adjust top position as needed */
+  left: 15px;
+  width: 200px; /* Adjust width as needed */
+  z-index: 999; /* Ensure it stays above other content */
+  background-color: transparent; /* Add background color if necessary */
+  padding-bottom: 600px;
+   /* Add padding as needed */
+}
+
+.content-wrapper {
+  margin-left: 220px; /* Adjust margin to match navbar width */
+  padding: 20px; /* Add padding as needed */
+}
+
+/* Ensure content is scrollable */
+.content {
+  overflow-y: auto;
+  max-height: calc(100vh - 40px); /* Adjust according to navbar height and padding */
+}

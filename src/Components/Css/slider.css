@@ -1,0 +1,52 @@
+/* Slider.css */
+.slider-container {
+    width: 180px;
+    position: relative;
+  }
+  
+  .slider {
+    width: 100%;
+    height: 10px;
+    margin-left: 20px;
+    background: linear-gradient(
+      90deg,
+      #b5d4f1 0%,
+      #81e5db 37.77%,
+      #e8d284 70.4%,
+      #e2798e 100%
+    );
+    border-radius: 0px;
+  }
+  .healthyfed {
+    padding: 6px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #d6ffdd;
+  }
+  .obesefed {
+    padding: 6px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #ff4747;
+  }
+  .underfed {
+    padding: 6px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #d6fcff;
+  }
+  .overfed {
+    padding: 6px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #fff2d6;
+  }
+  

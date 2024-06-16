@@ -1,0 +1,41 @@
+/* styles.css */
+
+/* Filled Tile styles */
+.filled-tile {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(255, 0, 0, 0.519);
+    margin: 0.5rem; /* Add margin */
+}
+
+.gradient-bg {
+    background-image: linear-gradient(to right, #ff00ff, #ffff00);
+}
+
+.text-styling {
+    font-weight: bold;
+    font-size: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    width: 100%; /* Adjust width */
+    height: 100%; /* Adjust height */
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.text-styling:hover {
+    background-color: #333;
+}
+
+/* Empty Tile styles */
+.empty-tile {
+    background-color: #333;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+}

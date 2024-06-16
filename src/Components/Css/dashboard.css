@@ -1,0 +1,11 @@
+.font{
+font-size: larger;
+font-weight: 600;
+}
+.font2{
+    font-size: medium;
+    font-weight: 400; 
+}
+.activeClicked{
+    color: #ff5733 ;
+}

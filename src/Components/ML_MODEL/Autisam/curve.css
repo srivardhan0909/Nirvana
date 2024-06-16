@@ -1,0 +1,70 @@
+/* Quiz.css */
+
+.progress-container {
+  width: 80%;
+  height: 8px;
+  border: 1px solid #ccc;
+  overflow: hidden; /* Ensure the overflow is hidden for smooth animations */
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+.progress-bar.animate {
+  width: 100%;
+}
+.btn{
+
+  margin: 10px ;
+  border-radius:  3px;
+  outline: none;
+  border:0;
+  background-color:#800080;
+  color: white;
+  box-shadow: 3px 3px 1px rgba(0,0,0,.2);
+  
+
+}
+.btn:hover{
+  background-color:#f02cf0e2;
+  opacity: 90%;
+  color:white
+}
+.btn:disabled{
+  background-color:white
+}
+.sidebar{
+  height: 85vh;
+  z-index: 7;
+
+}
+.back2{
+  min-width: 800px;
+  background: #fffcf8;
+  max-width: 60rem;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.08);
+
+
+}
+.zindex{
+  z-index: 100;
+}
+.servey{
+  height: 85vh;
+z-index: 2;
+}
+.question-container {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out; /* Add a smooth transition effect for questions */
+}
+
+.question-container.fade-out {
+  opacity: 0;
+}
+
+.question-container.fade-in {
+  opacity: 1;
+}

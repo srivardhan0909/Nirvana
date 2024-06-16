@@ -1,0 +1,31 @@
+/* Update these styles in your CSS file */
+
+.navbar-custom {
+  background-color: transparent;
+}
+
+.navbar-custom .nav-link {
+  color: #000000;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar-custom .nav-link:hover {
+  color:#000000 ;
+  box-shadow: 0px 0px 30px rgba(0, 123, 255, 0.7);
+}
+
+.navbar-custom .nav-link.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .user-icon-container .user-dropdown button {
+  border-radius: 20px;
+  height: 45px;
+}
+/* Add this CSS rule */
+.navbar .nav-link-container.login-link {
+  margin-left: -5cm;
+}

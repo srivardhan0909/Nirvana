@@ -1,0 +1,51 @@
+.ntitle{
+    color: #002654;
+    font-family: 'Poppins';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 100px;
+}
+.Sides{
+    color: rgba(31, 21, 52, 1);
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.Sides2{
+    color: rgba(31, 21, 52, 1);
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.App-logo{
+    height: 30px;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(62, 139, 239, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+    /* Adjust the positioning */
+    top: 77%;
+    left: 85%;
+    /*transform: translate(-50%, -50%);*/
+}
+  
+.user-icon-container:hover .user-dropdown {
+    display: block;
+}
+.content-wrappers {
+    padding-top: 70px; /* Adjust this value based on the height of your navbar */
+  }
+  
+  
