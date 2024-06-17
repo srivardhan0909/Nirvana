@@ -30,11 +30,11 @@
     "mongoose": "^8.0.0",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.7",
-    "react": "^18.2.0",
+    "react": "^15.6.1",
     "react-bootstrap": "^2.9.1",
     "react-bootstrap-sidebar-menu": "^2.0.3",
     "react-calendar": "^4.6.1",
-    "react-dom": "^18.2.0",
+    "react-dom": "^15.6.1",
     "react-github-login": "^1.0.3",
     "react-google-login": "^5.2.2",
     "react-icons": "^4.11.0",
@@ -50,7 +50,7 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build:css": "npx tailwindcss build src/tailwind.css -o src/output.css",
-    "build": "react-scripts build",
+    "build": "npm install --legacy-peer-deps && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build"
