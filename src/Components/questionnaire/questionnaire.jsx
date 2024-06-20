@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import './questionnaire.css';
 
 const preLoginQuestions = [
-  "How often have you been feeling down, depressed, or hopeless?",
-  "How often have you been experiencing little interest or pleasure in doing things you typically enjoy?",
-  "How often have you been feeling anxious, worried, or on edge?",
-  "How often have you been experiencing difficulty sleeping or sleeping too much?",
-  "How often have you been experiencing fatigue or low energy levels?"
+  "How would you rate your overall mood, specifically in terms of feeling down, depressed, or hopeless?",
+  "How would you rate your level of interest or pleasure in activities you typically enjoy?",
+  "How would you rate your feelings of anxiety, worry, or being on edge?",
+  "How would you rate your sleep quality, in terms of experiencing difficulty sleeping or sleeping too much?",
+  "How would you rate your energy levels, specifically in terms of experiencing fatigue or low energy?"
 ];
 
 const postLoginQuestions = [
