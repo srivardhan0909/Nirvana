@@ -23,7 +23,7 @@ const categoryNames = [
   "Depression",
   "Anxiety",
   "Normal",
-  "Happy",
+  "Stress", // Updated "Happy" to "Stress"
   "Memory",
   "Relax",
 ];
@@ -82,6 +82,29 @@ function DashboardMain() {
           }
         }
 
+        // Fetch post-login scores from localStorage
+        const postLoginScores = JSON.parse(localStorage.getItem("postLoginScores"));
+        if (postLoginScores) {
+          if (postLoginScores.normal) {
+            calculatedAverages.normal = postLoginScores.normal === 'high' ? 9 : 6;
+          }
+          if (postLoginScores.depression) {
+            calculatedAverages.depression = postLoginScores.depression === 'high' ? 9 : 6;
+          }
+          if (postLoginScores.anxiety) {
+            calculatedAverages.anxiety = postLoginScores.anxiety === 'high' ? 9 : 6;
+          }
+          if (postLoginScores.relax) {
+            calculatedAverages.relax = postLoginScores.relax === 'high' ? 9 : 6;
+          }
+          if (postLoginScores.memory) {
+            calculatedAverages.memory = postLoginScores.memory === 'high' ? 9 : 6;
+          }
+          if (postLoginScores.happy) {
+            calculatedAverages.stress = postLoginScores.happy === 'high' ? 9 : 6; // Change "Happy" to "Stress"
+          }
+        }
+
         // Update the state with the calculated averages
         setAverages(calculatedAverages);
 
@@ -90,6 +113,7 @@ function DashboardMain() {
         console.error("Error fetching user details:", error);
       }
     };
+
     fetchUserDetails();
   }, []);
 
@@ -133,31 +157,31 @@ function DashboardMain() {
                       {category}
                     </div>
                     <div className="align-items-end ab">
-                      <span>{Math.ceil(averages[category]) || 0}</span>
+                      <span>{Math.ceil(averages[category.toLowerCase()]) || 0}</span>
                       <div>
-                        {Math.ceil(averages[category]) >= 8
-                          ? "Good"
-                          : Math.ceil(averages[category]) >= 5
+                        {Math.ceil(averages[category.toLowerCase()]) < 5
+                          ? "Low"
+                          : Math.ceil(averages[category.toLowerCase()]) <= 8
                           ? "Average"
-                          : "Bad"}
+                          : "High"}
                       </div>
                     </div>
                     <div className="align-items-end ab">
                       <img
                         className="footer"
                         src={
-                          Math.ceil(averages[category]) >= 8
-                            ? getCategoryfooter("Good")
-                            : Math.ceil(averages[category]) >= 5
+                          Math.ceil(averages[category.toLowerCase()]) < 5
+                            ? getCategoryfooter("Low")
+                            : Math.ceil(averages[category.toLowerCase()]) <= 8
                             ? getCategoryfooter("Avg")
-                            : getCategoryfooter("Bad")
+                            : getCategoryfooter("High")
                         }
                         alt={
-                          Math.ceil(averages[category]) >= 8
-                            ? "Good"
-                            : Math.ceil(averages[category]) >= 5
+                          Math.ceil(averages[category.toLowerCase()]) >= 8
+                            ? "Low"
+                            : Math.ceil(averages[category.toLowerCase()]) >= 5
                             ? "Average"
-                            : "Bad"
+                            : "High"
                         }
                       />
                     </div>
@@ -216,14 +240,15 @@ function DashboardMain() {
           <div className="bmiback ">
             <h6 className=" bmitext2">Body Mass Index (BMI)</h6>
             <div></div>
-            <Slider value={Math.round(bmi)} />
+            <Slider              value={Math.round(bmi)} />
           </div>
         </div>
         <div className="line mx-2"></div>
         <div className="d-flex justify-content-center "></div>
       </div>
     </div>
-  );
+ 
+);
 }
 
 function getCategoryIcon(category) {
@@ -234,27 +259,27 @@ function getCategoryIcon(category) {
       return memoryIcon;
     case "normal":
       return languageIcon;
-    case "happy":
+    case "stress": // Changed from "happy" to "stress"
       return reasoningIcon;
     case "memory":
       return problemSolvingIcon;
     case "relax":
       return reflexIcon;
     default:
-      return null;
+      return attentionIcon;
   }
 }
 
-function getCategoryfooter(category) {
-  switch (category.toLowerCase()) {
-    case "bad":
-      return bad;
+function getCategoryfooter(status) {
+  switch (status.toLowerCase()) {
+    case "low":
+      return good;
     case "avg":
       return avg;
-    case "good":
-      return good;
+    case "high":
+      return bad;
     default:
-      return null;
+      return avg;
   }
 }
 

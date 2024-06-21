@@ -27,13 +27,13 @@
 }
 
 .text-styling:hover {
-    background-color: #333;
+    background-color: #f85757;
 }
 
 /* Empty Tile styles */
 .empty-tile {
     background-color: #333;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.125rem 0.25rem rgba(238, 231, 231, 0.15);
     width: 5rem;
     height: 5rem;
     border-radius: 0.25rem;

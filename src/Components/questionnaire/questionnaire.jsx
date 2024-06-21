@@ -7,7 +7,6 @@ const preLoginQuestions = [
   "How would you rate your level of interest or pleasure in activities you typically enjoy?",
   "How would you rate your feelings of anxiety, worry, or being on edge?",
   "How would you rate your sleep quality, in terms of experiencing difficulty sleeping or sleeping too much?",
-  "How would you rate your energy levels, specifically in terms of experiencing fatigue or low energy?"
 ];
 
 const postLoginQuestions = [
@@ -15,12 +14,14 @@ const postLoginQuestions = [
   "Have you noticed any improvements in your ability to manage stress since using our website? If so, please describe.",
   "How often have you been practicing the coping strategies or exercises recommended by our website?",
   "How effective do you find the resources and tools provided by our website in helping you manage your mental health?",
-  "How often do you participate in any community or support groups offered through our website?",
+  "How would you rate your memory and cognitive functions since using our website?",
+  "How happy do you feel overall compared to when you first started using our website?",
+  "How would you rate your ability to handle depressive symptoms since using our website?",
 ];
 
 function Questionnaire() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [responses, setResponses] = useState(Array(10).fill(1));
+  const [responses, setResponses] = useState(Array(7).fill(1)); // Adjusted array length
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -41,8 +42,8 @@ function Questionnaire() {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      const highResponses = responses.filter(response => response <= 3).length;
-      if (highResponses > 7) {
+      const poorResponses = responses.filter(response => response <= 3).length;
+      if (poorResponses > 2 && !isLoggedIn) { // Adjusted condition
         navigate('/contact');
       } else {
         localStorage.setItem("questionnaireCompleted", "true");
@@ -50,11 +51,24 @@ function Questionnaire() {
         if (!isLoggedIn) {
           navigate('/Login');
         } else {
-          alert('Use our website to clear your anxiety, tension, or depression.');
+          const scores = calculateScores(responses);
+          localStorage.setItem("postLoginScores", JSON.stringify(scores));
           navigate('/');
         }
       }
     }
+  };
+
+  const calculateScores = (responses) => {
+    return {
+      normal: responses[0] > 3 ? 'high' : 'avg',
+      depression: responses[1] > 3 ? 'low' : 'high',
+      anxiety: responses[2] > 3 ? 'low' : 'high',
+      relax: responses[3] > 3 ? 'low' : 'high',
+      memory: responses[4] > 3 ? 'high' : 'avg',
+      happy: responses[5] > 3 ? 'high' : 'avg',
+      depressiveSymptoms: responses[6] > 3 ? 'low' : 'high',
+    };
   };
 
   const getScalePercentage = () => {
@@ -82,11 +96,11 @@ function Questionnaire() {
               <label key={value}>
                 <input
                   type="radio"
-                  name="response"
-                  value={value}
-                  checked={responses[currentQuestionIndex] === value}
-                  onChange={() => handleResponseChange(value)}
-                />
+                name="response"
+                value={value}
+                checked={responses[currentQuestionIndex] === value}
+                onChange={() => handleResponseChange(value)}
+              />
               </label>
             ))}
             <label>
