@@ -21,13 +21,18 @@ const postLoginQuestions = [
 
 function Questionnaire() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [responses, setResponses] = useState(Array(7).fill(1)); // Adjusted array length
+  const [responses, setResponses] = useState([]);
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     setIsLoggedIn(localStorage.getItem("name") !== null);
   }, []);
+
+  useEffect(() => {
+    const questions = isLoggedIn ? postLoginQuestions : preLoginQuestions;
+    setResponses(Array(questions.length).fill(1));
+  }, [isLoggedIn]);
 
   const questions = isLoggedIn ? postLoginQuestions : preLoginQuestions;
 
@@ -43,7 +48,7 @@ function Questionnaire() {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       const poorResponses = responses.filter(response => response <= 3).length;
-      if (poorResponses > 2 && !isLoggedIn) { // Adjusted condition
+      if (poorResponses > 2 && !isLoggedIn) {
         navigate('/contact');
       } else {
         localStorage.setItem("questionnaireCompleted", "true");

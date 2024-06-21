@@ -23,11 +23,8 @@ function TopNavbar() {
 
   useEffect(() => {
     setPropt(localStorage.getItem("name"));
-    if (localStorage.getItem("name") !== null) {
+    if (localStorage.getItem("name")) {
       setSignup(true);
-    }
-    if (localStorage.getItem("name") === "") {
-      setSignup(false);
     }
   }, [location]);
 

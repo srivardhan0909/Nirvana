@@ -20,14 +20,14 @@ function Contact() {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        alert('Message will be sent with Twilio!');
-        setFormData({ name: '', email: '', message: '' }); // Clear form data after submission
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
       } else {
-        alert('Message will be sent with Twilio!');
+        alert('Failed to send message. Please try again.');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Error sending message.');
+      alert('Error sending message. Please try again.');
     }
   };
 
@@ -37,7 +37,7 @@ function Contact() {
       <div className="contact-info">
         <p><strong>Phone:</strong> 9177390913</p>
         <p><strong>Email:</strong> jakkanisri0909@gmail.com</p>
-        <p><strong>Address:</strong> medchal,hyderabad</p>
+        <p><strong>Address:</strong> Medchal, Hyderabad</p>
       </div>
       <div className="contact-form">
         <h2>Send us a message</h2>
