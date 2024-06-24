@@ -13,8 +13,14 @@ body {
   }
   .imghearts{
     height:45px;
+    align-items: center;
   }
-  
+  .hearts-container {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically if needed */
+    gap: 10px; /* Adjust the space between images */
+  }
   .pattern-container {
     margin: 10px;
     padding: 10px;

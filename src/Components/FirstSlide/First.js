@@ -19,7 +19,7 @@ function FirstLayout() {
       <Row>
         <Col>
           <div className='first'>
-            Virtual Mental healthcare
+          Nurturing minds, Enriching lives
           </div>
           <ExampleComponent/> 
           <div className='bton'>

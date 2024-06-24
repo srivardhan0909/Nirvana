@@ -89,7 +89,7 @@ function TopNavbar() {
           <Nav style={{ fontFamily: "Poppins" }}>
             <div className="d-flex gap-1">
               {signup ? (
-                <div className="user-icon-container" onDoubleClick={handleDoubleClick}>
+                <div className="user-icon-container" onDoubleClick={handleDoubleClick} style={{marginRight : "20px"}}>
                   <img
                     src={user_icon}
                     alt="User"
@@ -98,7 +98,7 @@ function TopNavbar() {
                     className="user-icon"
                   />
                   {showDropdown && (
-                    <div className="user-dropdown" ref={dropdownRef}>
+                    <div className="user-dropdown" ref={dropdownRef} >
                       <h6>Welcome back,</h6>
                       <h5>{propt}</h5>
                       <button
@@ -113,7 +113,7 @@ function TopNavbar() {
               ) : (
                 <Nav.Link
                   href="/questionnaire"
-                  className={`nav-link ${location.pathname === "/Login" ? "active" : ""}`}
+                  className={`nav-link ${location.pathname === "/Login" ? "active" : ""}`} style={{ marginRight:"60px"}}
                   onClick={() => {
                     if (!questionnaireCompleted) {
                       alert("Please complete the questionnaire before logging in.");

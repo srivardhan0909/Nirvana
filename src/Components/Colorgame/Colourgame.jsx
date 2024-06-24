@@ -132,7 +132,7 @@ const ColourGame = () => {
       <h4>Score: {score}</h4>
       <div id="hearts-container">
         {Array.from({ length: hearts }).map((_, index) => (
-          <img key={index} className="imghearts" src={heartImage} alt={`Heart ${index + 1}`} />
+          <img key={index} className="imghearts"  src={heartImage} style={{marginLeft: "670px"}}alt={`Heart ${index + 1}`} />
         ))}
       </div>
       {!gameOver ? (

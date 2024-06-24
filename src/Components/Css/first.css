@@ -1,11 +1,11 @@
 .first{
     color: #000;
     font-family: 'Poppins';
-    font-size: 42px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 700;
-    line-height: 56px; /* 116.667% */
-    padding-top: 150px;
+    line-height: 90px; /* 116.667% */
+    padding-top: 130px;
 }
 .second{
     color: #4407f9;

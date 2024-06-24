@@ -13,7 +13,6 @@ import ResetPassword from "./Components/accountBox/Resetpass";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthForm from "./Components/accountBox/Authform";
 import Sidebar from "./Components/Dashboard/sidebar";
-import GradioButton from './Components/chat_bot/GradioButton';
 import './Components/chat_bot/GradioButton.css';
 import Autisam from "./Components/ML_MODEL/Autisam/auti";
 import DQuiz from "./Components/ML_MODEL/Dyslexia/templates/quiz"
@@ -38,7 +37,6 @@ function App() {
       <BrowserRouter>
         <TopNavbar />
         <div className="content-wrappers"></div>
-        <GradioButton />
         <Routes>
           <Route
             path="/"
