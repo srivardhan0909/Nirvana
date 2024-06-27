@@ -1,6 +1,6 @@
 .questionnaire-modal {
-  max-width: 600px;
-  margin: 50px auto;
+  max-width: 900px;
+  margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -14,28 +14,39 @@
 }
 
 .question {
-  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-.question label {
-  display: block;
-  margin-bottom: 5px;
+.question img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .options {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
+  flex-direction: column;
+  margin-top: 10px;
 }
 
-.options .radio-label {
+.options label {
   display: flex;
-  align-items: center;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .options input[type="radio"] {
-  margin-right: 5px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
@@ -55,8 +66,7 @@
 }
 
 button[type="submit"] {
-  display: block;
-  width: 100%;
+  width: 100px;
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -64,6 +74,7 @@ button[type="submit"] {
   color: #fff;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 button[type="submit"]:hover {
