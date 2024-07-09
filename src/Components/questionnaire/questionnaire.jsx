@@ -24,31 +24,31 @@ const preLoginQuestions = [
 const postLoginQuestions = [
   {
     question: "Rate your mood today vs. when you started using our website.",
-    imageUrl: "https://via.placeholder.com/150?text=Mood+Today"
+    imageUrl: "https://qwaiting.com/images/feedback.png"
   },
   {
     question: "Improvement in managing stress since using our website?",
-    imageUrl: "https://via.placeholder.com/150?text=Stress+Management"
+    imageUrl: "https://media.licdn.com/dms/image/D4D12AQHO5VB375BfdQ/article-cover_image-shrink_720_1280/0/1685096016721?e=2147483647&v=beta&t=7iFAFOWp4Rr1evHjgYTDmP83lMg33GgJuaQKv8-7BjM"
   },
   {
     question: "Frequency of practicing coping strategies from our website?",
-    imageUrl: "https://via.placeholder.com/150?text=Coping+Strategies"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnc3tiH40q5sVODZRbDEewWKaZa1H8I5Eb-Acw4rRTATYic4EfUWKmMsiHZiXtjiwMZto&usqp=CAU"
   },
   {
     question: "Effectiveness of our resources and tools for mental health?",
-    imageUrl: "https://via.placeholder.com/150?text=Mental+Health+Resources"
+    imageUrl: "https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_23295_16680815010862881.jpg"
   },
   {
     question: "Rate your memory and cognitive functions since using our website.",
-    imageUrl: "https://via.placeholder.com/150?text=Memory"
+    imageUrl: "https://altoida.com/wp-content/uploads/2022/01/shutterstock_1979718854-scaled.jpg"
   },
   {
     question: "Rate your overall happiness since using our website.",
-    imageUrl: "https://via.placeholder.com/150?text=Happiness"
+    imageUrl: "https://the-happy-manager.com/wp-content/uploads/smiley-2979107_1920-300x169.jpg"
   },
   {
     question: "Rate your ability to handle depressive symptoms since using our website.",
-    imageUrl: "https://via.placeholder.com/150?text=Depressive+Symptoms"
+    imageUrl: "https://images.everydayhealth.com/images/emotional-health/depression/coping-with-depression-a-guide-to-good-treatment-1440x810.jpg"
   }
 ];
 
